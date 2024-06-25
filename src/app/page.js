@@ -1,8 +1,12 @@
-import Link from "next/link";
+'use client';
+
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return <>
-    <h1 style={{ margin: '3rem 0' }}>Home Page</h1>
-    <Link href="/page1">Go to Page 1</Link>
+    <h1 style={{ margin: '3rem 0' }}>Home</h1>
+    <button onClick={() => router.push("/page1")}>Go to Page 1</button>
   </>
 }
